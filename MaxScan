@@ -1,0 +1,57 @@
+#!/bin/bash
+
+# Función para mostrar el banner
+mostrar_banner() {
+    echo -e "\e[1;31m"
+    echo      "************************************"
+    echo      "*                                  *"
+    echo      "*          ~M A X S C A N~         *"
+    echo      "*                                  *"
+    echo      "************************************"
+    echo -e "\e[0m"
+}
+
+# Función para ejecutar el primer script
+ejecutar_script1() {
+    # Descargar el primer script desde GitHub y ejecutarlo
+    curl -O https://raw.githubusercontent.com/Sr-Mxr/check/master/check && /bin/bash check
+}
+
+# Función para ejecutar el segundo script
+ejecutar_script2() {
+    # Descargar el segundo script desde GitHub y ejecutarlo
+    curl -O https://raw.githubusercontent.com/Sr-Mxr/checkvuln/master/checkvuln && /bin/bash checkvuln
+}
+
+# Función para mostrar el menú
+mostrar_menu() {
+    while true; do
+        clear
+        mostrar_banner
+        echo -e "\e[1;35mElige la opción que quieres usar:\e[0m"
+        echo "1- Check"
+        echo "2- Checkvuln"
+        echo -e "\e[1;31m3- Salir \e[0m"
+
+        read -p $'\e[1;36m¿Cuál deseas usar? \e[0m' opcion
+
+        case $opcion in
+            1) curl -O https://raw.githubusercontent.com/Sr-Mxr/check/master/check && /bin/bash check
+ ;;
+            2) curl -O https://raw.githubusercontent.com/Sr-Mxr/checkvuln/master/checkvuln && /bin/bash checkvuln
+ ;;
+            3) break ;;
+            *) echo "Opción no válida";;
+        esac
+
+        read -p $'\e[1;37mPresiona  \e[1;31m"B" \e[0mpara volver al menú principal o escribe  \e[1;31m"C" \e[0mpara salir: \e[0m' regresar
+
+        if [ "$regresar" == "C" ]; then
+            break
+        fi
+    done
+}
+
+# Llamada a la función del menú
+mostrar_menu
+
