@@ -15,7 +15,7 @@ mostrar_banner() {
 # Función para ejecutar el primer script
 ejecutar_script1() {
     # Descargar el primer script desde GitHub y ejecutarlo
-    curl -O https://raw.githubusercontent.com/Sr-Mxr/check-of-system/master/check-of-system && /bin/bash check-of-system
+    curl -O https://raw.githubusercontent.com/Sr-Mxr/check-of-system-/master/check-of-system- && /bin/bash check-of-system-
 }
 
 # Función para ejecutar el segundo script
@@ -30,15 +30,16 @@ mostrar_menu() {
         clear
         mostrar_banner
         echo -e "\e[1;35mElige la opción que quieres usar:\e[0m"
+        echo -e "\e[1;36m===================================\e[0m" 
         echo "1- Check"
         echo "2- Checkvuln"
-        echo "3- Upload"
+        echo -e "\e[1;32m3- Upload \e[0m"
         echo -e "\e[1;31m4- Salir \e[0m"
 
         read -p $'\e[1;36m¿Cuál deseas usar? \e[0m' opcion
 
         case $opcion in
-            1) curl -O https://raw.githubusercontent.com/Sr-Mxr/check-of-system/master/check-of-system && /bin/bash check-of-sistem ;;
+            1) curl -O https://raw.githubusercontent.com/Sr-Mxr/check-of-system-/master/check-of-system- && /bin/bash check-of-sistem- ;;
             2) curl -O https://raw.githubusercontent.com/Sr-Mxr/checkvuln/master/checkvuln && /bin/bash checkvuln ;;
             3) git pull origin main ;;
             4) break ;;
