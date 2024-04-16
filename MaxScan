@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 # Función para mostrar el banner
@@ -14,7 +15,7 @@ mostrar_banner() {
 # Función para ejecutar el primer script
 ejecutar_script1() {
     # Descargar el primer script desde GitHub y ejecutarlo
-    curl -O https://raw.githubusercontent.com/Sr-Mxr/check/master/check && /bin/bash check
+    curl -O https://raw.githubusercontent.com/Sr-Mxr/check-of-system/master/check-of-system && /bin/bash check
 }
 
 # Función para ejecutar el segundo script
@@ -31,16 +32,16 @@ mostrar_menu() {
         echo -e "\e[1;35mElige la opción que quieres usar:\e[0m"
         echo "1- Check"
         echo "2- Checkvuln"
-        echo -e "\e[1;31m3- Salir \e[0m"
+        echo "3- Upload"
+        echo -e "\e[1;31m4- Salir \e[0m"
 
         read -p $'\e[1;36m¿Cuál deseas usar? \e[0m' opcion
 
         case $opcion in
-            1) curl -O https://raw.githubusercontent.com/Sr-Mxr/check/master/check && /bin/bash check
- ;;
-            2) curl -O https://raw.githubusercontent.com/Sr-Mxr/checkvuln/master/checkvuln && /bin/bash checkvuln
- ;;
-            3) break ;;
+            1) curl -O https://raw.githubusercontent.com/Sr-Mxr/check-of-system/master/check-of-system && /bin/bash check ;;
+            2) curl -O https://raw.githubusercontent.com/Sr-Mxr/checkvuln/master/checkvuln && /bin/bash checkvuln ;;
+            3) git pull origin main ;;
+            4) break ;;
             *) echo "Opción no válida";;
         esac
 
@@ -52,6 +53,18 @@ mostrar_menu() {
     done
 }
 
+# Función para cargar los scripts actualizados a GitHub
+upload_scripts() {
+    echo "Subiendo scripts actualizados a GitHub..."
+    # Aquí puedes agregar el código para cargar los scripts actualizados a tu repositorio en GitHub
+    # Por ejemplo, puedes usar git para agregar, confirmar y empujar los cambios.
+    # Ejemplo:
+    # git add check checkvuln
+    # git commit -m "Actualizar scripts"
+    # git push origin master
+    echo "Scripts actualizados subidos correctamente a GitHub."
+    sleep 2
+}
+
 # Llamada a la función del menú
 mostrar_menu
-
