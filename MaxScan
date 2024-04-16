@@ -15,7 +15,7 @@ mostrar_banner() {
 # Función para ejecutar el primer script
 ejecutar_script1() {
     # Descargar el primer script desde GitHub y ejecutarlo
-    curl -O https://raw.githubusercontent.com/Sr-Mxr/check-of-system/master/check-of-system && /bin/bash check
+    curl -O https://raw.githubusercontent.com/Sr-Mxr/check-of-system/master/check-of-system && /bin/bash check-of-system
 }
 
 # Función para ejecutar el segundo script
@@ -38,7 +38,7 @@ mostrar_menu() {
         read -p $'\e[1;36m¿Cuál deseas usar? \e[0m' opcion
 
         case $opcion in
-            1) curl -O https://raw.githubusercontent.com/Sr-Mxr/check-of-system/master/check-of-system && /bin/bash check ;;
+            1) curl -O https://raw.githubusercontent.com/Sr-Mxr/check-of-system/master/check-of-system && /bin/bash check-of-sistem ;;
             2) curl -O https://raw.githubusercontent.com/Sr-Mxr/checkvuln/master/checkvuln && /bin/bash checkvuln ;;
             3) git pull origin main ;;
             4) break ;;
