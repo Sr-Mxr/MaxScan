@@ -26,7 +26,6 @@ Checkvuln: Ejecuta el script de comprobación de vulnerabilidades checkvuln.
 Salir: Termina la ejecución de MAXSCAN.
 
 ## Requisitos
-
 Bash
 curl
 
