@@ -1,16 +1,14 @@
 # MAXSCAN
+MAXSCAN is a Bash tool to run security scripts from GitHub.
 
-MAXSCAN es una herramienta Bash para ejecutar scripts de seguridad desde GitHub.
+# Features
+Downloads and executes security scripts from GitHub.
+Simple and user-friendly interface.
 
-# Características
-
-Descarga y ejecuta scripts de seguridad desde GitHub.
-Interfaz de usuario simple y fácil de usar.
-## Uso
-
-Clona este repositorio o descarga el script maxscan.sh.
-Abre una terminal y navega hasta el directorio donde se encuentra maxscan.sh.
-Ejecuta el script usando el comando:
+## Usage
+Clone this repository or download the maxscan.sh script.
+Open a terminal and navigate to the directory where maxscan.sh is located.
+Run the script using the command:
 bash
 
 ## Copy code
@@ -18,23 +16,22 @@ bash
 ```bash
 ./maxscan.sh
 ```
+Select one of the menu options to execute the corresponding script.
 
-Selecciona una de las opciones del menú para ejecutar el script correspondiente.
-Opciones del Menú
-Check: Ejecuta el script de verificación de seguridad check.
-Checkvuln: Ejecuta el script de comprobación de vulnerabilidades checkvuln.
-Salir: Termina la ejecución de MAXSCAN.
+## Menu Options
+Check: Executes the security verification script check.
+Checkvuln: Executes the vulnerability checking script checkvuln.
+Exit: Ends the execution of MAXSCAN.
 
-## Requisitos
+## Requirements
 Bash
 curl
 
-## Contribuciones
-Las contribuciones son bienvenidas. Si tienes alguna sugerencia de mejora o encuentras un error, no dudes en abrir un issue o enviar un pull request.
+## Contributions
+Contributions are welcome. If you have any suggestions for improvement or find a bug, feel free to open an issue or send a pull request.
 
-## Autor
-
-MAXSCAN fue creado por Sr-Mxr.
+## Author
+MAXSCAN was created by Sr-Mxr.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more information.
