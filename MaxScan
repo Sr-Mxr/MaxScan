@@ -5,7 +5,7 @@ mostrar_banner() {
     echo -e "\e[1;31m"
     echo      "************************************"
     echo      "*                                  *"
-    echo      "*          ~M A X S C A N~         *"
+    echo      "*        \~ M A X S C A N ~/       *"
     echo      "*                                  *"
     echo      "************************************"
     echo -e "\e[0m"
