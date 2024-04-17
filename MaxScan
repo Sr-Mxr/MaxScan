@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # Función para mostrar el banner
@@ -12,24 +11,9 @@ mostrar_banner() {
     echo -e "\e[0m"
 }
 
-# Función para ejecutar el primer script
-ejecutar_script1() {
-    bash script1.sh
-}
-
-# Función para ejecutar el segundo script
-ejecutar_script2() {
-    bash script2.sh
-}
-
-# Función para actualizar los scripts desde GitHub
-actualizar_scripts() {
-    git pull origin master
-}
-
 # Mostrar las opciones al usuario
 mostrar_menu() {
-   while true; do
+    while true; do
         clear
         mostrar_banner
         echo -e "\e[1;35mElige la opción que quieres usar:\e[0m"
@@ -38,18 +22,32 @@ mostrar_menu() {
         echo "2- Checkvuln"
         echo -e "\e[1;32m3- Upload \e[0m"
         echo -e "\e[1;31m4- Salir \e[0m"
+        read -p "Opción: " opcion
+
+        case $opcion in
+            1)
+                curl -o check https://raw.githubusercontent.com/Sr-Mxr/check/master/check
+                chmod +x check
+                ./check
+                ;;
+            2)
+                curl -o checkvuln https://raw.githubusercontent.com/Sr-Mxr/checkvuln/master/checkvuln
+                chmod +x checkvuln
+                ./checkvuln
+                ;;
+            3)
+                git pull origin main
+                ;;
+            4)
+                break
+                ;;
+            *)
+                echo "Opción no válida. Por favor, seleccione una opción válida."
+                ;;
+        esac
+    done
 }
 
 # Ciclo principal del programa
-while true; do
-    mostrar_menu
-    read opcion
+mostrar_menu
 
-    case $opcion in
-        1) curl -O https://raw.githubusercontent.com/Sr-Mxr/check/master/check && /bin/bash check ;;
-        2) curl -O https://raw.githubusercontent.com/Sr-Mxr/checkvuln/master/checkvuln && /bin/bash checkvuln ;;
-        3) git pull origin main ;;
-        4) break ;;
-        *) echo "Opción no válida. Por favor, seleccione una opción válida." ;;
-    esac
-done
