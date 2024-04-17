@@ -12,8 +12,6 @@ mostrar_banner() {
     echo -e "\e[0m"
 }
 
-#!/bin/bash
-
 # Función para ejecutar el primer script
 ejecutar_script1() {
     bash script1.sh
