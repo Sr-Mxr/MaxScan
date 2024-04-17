@@ -38,7 +38,6 @@ mostrar_menu() {
         echo "2- Checkvuln"
         echo -e "\e[1;32m3- Upload \e[0m"
         echo -e "\e[1;31m4- Salir \e[0m"
-
 }
 
 # Ciclo principal del programa
