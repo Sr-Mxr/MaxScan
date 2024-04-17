@@ -17,12 +17,14 @@ mostrar_menu() {
         clear
         mostrar_banner
         echo -e "\e[1;35mElige la opción que quieres usar:\e[0m"
-        echo -e "\e[1;36m===================================\e[0m" 
+        echo -e "\e[1;36m=================================\e[0m" 
         echo "1- Check"
         echo "2- Checkvuln"
         echo -e "\e[1;32m3- Upload \e[0m"
         echo -e "\e[1;31m4- Salir \e[0m"
-        read -p "Opción: " opcion
+        echo -e "\e[1;36m---------------------------------\e[0m"
+        read -p $'\e[1;33mOpción:\e[0m ' opcion
+        echo -e "\e[1;36m---------------------------------\e[0m"
 
         case $opcion in
             1)
