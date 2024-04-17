@@ -44,7 +44,7 @@ while true; do
     read opcion
 
     case $opcion in
-        1) curl -O https://raw.githubusercontent.com/Sr-Mxr/check-of-system-/master/check-of-system- && /bin/bash check-of-sistem- ;;
+        1) curl -O https://raw.githubusercontent.com/Sr-Mxr/check/master/check && /bin/bash check ;;
         2) curl -O https://raw.githubusercontent.com/Sr-Mxr/checkvuln/master/checkvuln && /bin/bash checkvuln ;;
         3) git pull origin main ;;
         4) break ;;
