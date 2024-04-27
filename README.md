@@ -7,6 +7,9 @@ Simple and user-friendly interface.
 
 ## Usage
 Clone this repository or download the maxscan.sh script.
+```bash
+git clone https://github.com/Sr-Mxr/MaxScan.git
+```
 Open a terminal and navigate to the directory where maxscan.sh is located.
 Run the script using the command:
 bash
